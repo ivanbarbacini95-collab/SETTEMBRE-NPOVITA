@@ -12,7 +12,7 @@
       document.documentElement.dataset.theme = ['navy', 'black', 'light'].includes(savedTheme) ? savedTheme : 'navy';
     } catch (_) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=14.10.1">
+  <link rel="stylesheet" href="style.css?v=15.3">
 </head>
 <body>
   <div class="app-shell">
@@ -131,6 +131,60 @@
             <span>Min 24h <b id="dayLow">—</b></span>
             <span>Max 24h <b id="dayHigh">—</b></span>
           </div>
+
+          <div class="market-timeframes" aria-label="Range prezzo per timeframe">
+            <div class="market-tf neutral" id="tf1dRow">
+              <div class="market-tf-meta">
+                <strong>1D</strong>
+                <span class="market-tf-range-values">
+                  <span><small>Min</small><b id="tf1dMin">—</b></span>
+                  <span class="tf-open-value"><small>Apertura</small><b id="tf1dOpen">—</b></span>
+                  <span><small>Max</small><b id="tf1dMax">—</b></span>
+                </span>
+                <em id="tf1dChange">—</em>
+              </div>
+              <div class="market-tf-track" id="tf1dTrack" aria-hidden="true"><span class="market-tf-fill"></span><span class="market-tf-open-marker"></span><span class="market-tf-dot"></span></div>
+            </div>
+
+            <div class="market-tf neutral" id="tf1mRow">
+              <div class="market-tf-meta">
+                <strong>1M</strong>
+                <span class="market-tf-range-values">
+                  <span><small>Min</small><b id="tf1mMin">—</b></span>
+                  <span class="tf-open-value"><small>Apertura</small><b id="tf1mOpen">—</b></span>
+                  <span><small>Max</small><b id="tf1mMax">—</b></span>
+                </span>
+                <em id="tf1mChange">—</em>
+              </div>
+              <div class="market-tf-track" id="tf1mTrack" aria-hidden="true"><span class="market-tf-fill"></span><span class="market-tf-open-marker"></span><span class="market-tf-dot"></span></div>
+            </div>
+
+            <div class="market-tf neutral" id="tf1yRow">
+              <div class="market-tf-meta">
+                <strong>1Y</strong>
+                <span class="market-tf-range-values">
+                  <span><small>Min</small><b id="tf1yMin">—</b></span>
+                  <span class="tf-open-value"><small>Apertura</small><b id="tf1yOpen">—</b></span>
+                  <span><small>Max</small><b id="tf1yMax">—</b></span>
+                </span>
+                <em id="tf1yChange">—</em>
+              </div>
+              <div class="market-tf-track" id="tf1yTrack" aria-hidden="true"><span class="market-tf-fill"></span><span class="market-tf-open-marker"></span><span class="market-tf-dot"></span></div>
+            </div>
+
+            <div class="market-tf neutral" id="tfAllRow" title="Dal primo storico disponibile della coppia INJ/USDT">
+              <div class="market-tf-meta">
+                <strong>ALL</strong>
+                <span class="market-tf-range-values">
+                  <span><small>Min</small><b id="tfAllMin">—</b></span>
+                  <span class="tf-open-value"><small>Apertura</small><b id="tfAllOpen">—</b></span>
+                  <span><small>Max</small><b id="tfAllMax">—</b></span>
+                </span>
+                <em id="tfAllChange">—</em>
+              </div>
+              <div class="market-tf-track" id="tfAllTrack" aria-hidden="true"><span class="market-tf-fill"></span><span class="market-tf-open-marker"></span><span class="market-tf-dot"></span></div>
+            </div>
+          </div>
         </article>
 
         <article class="data-card worth-card" id="worthCard">
@@ -220,7 +274,7 @@
       </section>
     </main>
 
-    <footer><span>INJ Monitor <b>v14.10.1</b></span><span id="endpointLabel">Rete Injective</span></footer>
+    <footer><span>INJ Monitor <b>v15.3</b></span><span id="endpointLabel">Rete Injective</span></footer>
   </div>
   <dialog class="wallet-dialog" id="walletDialog">
     <div class="dialog-heading">
@@ -231,6 +285,6 @@
     <div class="wallet-manager-list" id="walletManagerList"></div>
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=14.10.1" defer></script>
+  <script src="app.js?v=15.3" defer></script>
 </body>
 </html>
